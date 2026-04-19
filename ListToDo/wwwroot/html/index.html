@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do up - Sign Up</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="sign-up-ui"></div>
+
+<script
+        defer
+        crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_dGVuZGVyLWtpdGUtOTAuY2xlcmsuYWNjb3VudHMuZGV2JA"
+        src="https://tender-kite-90.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+        type="text/javascript">
+</script>
+
+<script>
+    function getTasksUrl() {
+        return "/html/tasks.html";
+    }
+
+    window.addEventListener('load', async function () {
+        if (!window.Clerk) {
+            console.error("Clerk script didn't load.");
+            return;
+        }
+
+        await Clerk.load();
+
+        if (localStorage.getItem('signOut') === 'true') {
+            localStorage.removeItem('signOut');
+            await Clerk.signOut();
+            return;
+        }
+
+        if (Clerk.user) {
+            const userName = Clerk.user.firstName
+                || Clerk.user.username
+                || Clerk.user.emailAddresses?.[0]?.emailAddress
+                || 'User';
+            localStorage.setItem('userName', userName);
+            window.location.href = getTasksUrl();
+            return;
+        }
+
+        Clerk.mountSignUp(document.getElementById('sign-up-ui'), {
+            appearance: {
+                variables: {
+                    colorPrimary: '#f84b7a',
+                }
+            }
+        });
+
+        Clerk.addListener(({ user }) => {
+            console.log("new login", user);
+            if (user) {
+                const userName = user.firstName
+                    || user.username
+                    || user.emailAddresses?.[0]?.emailAddress
+                    || 'User';
+                localStorage.setItem('userName', userName);
+                window.location.href = getTasksUrl();
+            }
+        });
+    });
+</script>
+</body>
+</html>

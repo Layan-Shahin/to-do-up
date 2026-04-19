@@ -1,0 +1,259 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ListToDo/1.0.0": {
+        "dependencies": {
+          "Clerk.Net": "1.15.0",
+          "Clerk.Net.DependencyInjection": "1.15.0",
+          "FluentValidation": "12.1.1",
+          "Microsoft.AspNetCore.OpenApi": "10.0.5"
+        },
+        "runtime": {
+          "ListToDo.dll": {}
+        }
+      },
+      "Clerk.Net/1.15.0": {
+        "dependencies": {
+          "Microsoft.Kiota.Bundle": "1.17.4"
+        },
+        "runtime": {
+          "lib/net9.0/Clerk.Net.dll": {
+            "assemblyVersion": "1.15.0.0",
+            "fileVersion": "1.15.0.0"
+          }
+        }
+      },
+      "Clerk.Net.DependencyInjection/1.15.0": {
+        "dependencies": {
+          "Clerk.Net": "1.15.0"
+        },
+        "runtime": {
+          "lib/net9.0/Clerk.Net.DependencyInjection.dll": {
+            "assemblyVersion": "1.15.0.0",
+            "fileVersion": "1.15.0.0"
+          }
+        }
+      },
+      "FluentValidation/12.1.1": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.1.1.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/10.0.5": {
+        "dependencies": {
+          "Microsoft.OpenApi": "2.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "10.0.5.0",
+            "fileVersion": "10.0.526.15411"
+          }
+        }
+      },
+      "Microsoft.Kiota.Abstractions/1.17.4": {
+        "dependencies": {
+          "Std.UriTemplate": "2.0.5"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Abstractions.dll": {
+            "assemblyVersion": "1.17.4.0",
+            "fileVersion": "1.17.4.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Bundle/1.17.4": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.17.4",
+          "Microsoft.Kiota.Http.HttpClientLibrary": "1.17.4",
+          "Microsoft.Kiota.Serialization.Form": "1.17.4",
+          "Microsoft.Kiota.Serialization.Json": "1.17.4",
+          "Microsoft.Kiota.Serialization.Multipart": "1.17.4",
+          "Microsoft.Kiota.Serialization.Text": "1.17.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Bundle.dll": {
+            "assemblyVersion": "1.17.4.0",
+            "fileVersion": "1.17.4.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Http.HttpClientLibrary/1.17.4": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.17.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.dll": {
+            "assemblyVersion": "1.17.4.0",
+            "fileVersion": "1.17.4.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Form/1.17.4": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.17.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Form.dll": {
+            "assemblyVersion": "1.17.4.0",
+            "fileVersion": "1.17.4.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Json/1.17.4": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.17.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Json.dll": {
+            "assemblyVersion": "1.17.4.0",
+            "fileVersion": "1.17.4.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Multipart/1.17.4": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.17.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.dll": {
+            "assemblyVersion": "1.17.4.0",
+            "fileVersion": "1.17.4.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Text/1.17.4": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.17.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Text.dll": {
+            "assemblyVersion": "1.17.4.0",
+            "fileVersion": "1.17.4.0"
+          }
+        }
+      },
+      "Microsoft.OpenApi/2.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Std.UriTemplate/2.0.5": {
+        "runtime": {
+          "lib/net5.0/Std.UriTemplate.dll": {
+            "assemblyVersion": "2.0.5.0",
+            "fileVersion": "2.0.5.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ListToDo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Clerk.Net/1.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nLl1EuxJcIsbH9DOZR8e3mxbea8Y0k5YM1Inr+pAOiMi/PRAD44o81eYiDZXor0KDyQWU9j7OtVCdVVmeupj+A==",
+      "path": "clerk.net/1.15.0",
+      "hashPath": "clerk.net.1.15.0.nupkg.sha512"
+    },
+    "Clerk.Net.DependencyInjection/1.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I5vjcwmBf3G5buhKMuJXc7FGPZfEXS4hC+FfX316DYATBoqQcvq3zrtr6odEcv1kNn5YeuBOP4v8ZiieoHcVog==",
+      "path": "clerk.net.dependencyinjection/1.15.0",
+      "hashPath": "clerk.net.dependencyinjection.1.15.0.nupkg.sha512"
+    },
+    "FluentValidation/12.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EPpkIe1yh1a0OXyC100oOA8WMbZvqUu5plwhvYcb7oSELfyUZzfxV48BLhvs3kKo4NwG7MGLNgy1RJiYtT8Dpw==",
+      "path": "fluentvalidation/12.1.1",
+      "hashPath": "fluentvalidation.12.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.OpenApi/10.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vTcxIfOPyfFbYk1g8YcXJfkMnlEWVkSnnjxcZLy60zgwiHMRf2SnZR+9E4HlpwKxgE3yfKMOti8J6WfKuKsw6w==",
+      "path": "microsoft.aspnetcore.openapi/10.0.5",
+      "hashPath": "microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Abstractions/1.17.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AOOWOOXX9Ut6o6zhRGvvpQ/59D5RD4iiSss+JsKgMCLDObM7s7X6lPBHSj311vRuKcHtmeHKvurLxYL/DWQsSA==",
+      "path": "microsoft.kiota.abstractions/1.17.4",
+      "hashPath": "microsoft.kiota.abstractions.1.17.4.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Bundle/1.17.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x4zZLC2i2H9g/9bipAU/0uSYad85SpJBk7X2yKO48OpT2G0gx+WZcDOMrTTDAYiJxu3h7fSOM+foC9tp6i2YIA==",
+      "path": "microsoft.kiota.bundle/1.17.4",
+      "hashPath": "microsoft.kiota.bundle.1.17.4.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Http.HttpClientLibrary/1.17.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-msSSDg5LiuPhQTiw5lwDnFO5i3bEBovRto+/XOCHBgn2rfSNF+QrR1NQAbun86YS5+0jid1UVTKVNoJ9DT37Ag==",
+      "path": "microsoft.kiota.http.httpclientlibrary/1.17.4",
+      "hashPath": "microsoft.kiota.http.httpclientlibrary.1.17.4.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Form/1.17.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tbmbxPihes7hcAXDgAC3gwDhPbwWrakjKlXT26w+Zav+mNDS/H4cFkMAIQp4KqEDUwvPbpGB8caDcmV/68r2pQ==",
+      "path": "microsoft.kiota.serialization.form/1.17.4",
+      "hashPath": "microsoft.kiota.serialization.form.1.17.4.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Json/1.17.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SKNy75CPRaKGqvJzYDvCPeA0XWxULO/rnomRRkVjNYKQBSc7JeYdFET21Vj7acnAYTcvFLuOjbx9e6EdzxvZhQ==",
+      "path": "microsoft.kiota.serialization.json/1.17.4",
+      "hashPath": "microsoft.kiota.serialization.json.1.17.4.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Multipart/1.17.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ht4ZnBWd4IO/8gwO/XXiUIBcH0hpt0+3fZUlpOeAGSGwU0orICARDAE6K3p/xIFcdQx64MkqiobyGSOrgKJN6w==",
+      "path": "microsoft.kiota.serialization.multipart/1.17.4",
+      "hashPath": "microsoft.kiota.serialization.multipart.1.17.4.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Text/1.17.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Li2DDCzyt9bs8D0ZCIlwgb0tfFoKoLPkn8zJJndopUDNixfxl+Xp9FBT+dnbyZRYpk6L0j55Vmw16e2j2D0E3w==",
+      "path": "microsoft.kiota.serialization.text/1.17.4",
+      "hashPath": "microsoft.kiota.serialization.text.1.17.4.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GGYLfzV/G/ct80OZ45JxnWP7NvMX1BCugn/lX7TH5o0lcVaviavsLMTxmFV2AybXWjbi3h6FF1vgZiTK6PXndw==",
+      "path": "microsoft.openapi/2.0.0",
+      "hashPath": "microsoft.openapi.2.0.0.nupkg.sha512"
+    },
+    "Std.UriTemplate/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PtqPdWNBObRcDHjyjbgOz2XoCJQaiA+HNDPQve/O7yGCkospfHDCuH9ULVx1msImwHHG+uhpDjiZX7bpLN/cnw==",
+      "path": "std.uritemplate/2.0.5",
+      "hashPath": "std.uritemplate.2.0.5.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@baseUrl = https://localhost:5205
+
+### GET ALL
+GET {{baseUrl}}/todos
+
+### GET BY ID
+GET {{baseUrl}}/todos/2
+
+### ADD
+POST {{baseUrl}}/todos
+Content-Type: application/json
+
+{
+  "id": 6,
+  "title": "Testing",
+  "description": "test the api",
+  "isCompleted": false
+}
+
+### EDIT
+PUT {{baseUrl}}/todos/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "UI/UX Updated",
+  "description": "updated description",
+  "isCompleted": true
+}
+
+### DELETE
+DELETE {{baseUrl}}/todos/1

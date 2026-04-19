@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To do up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/tasks.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar-left">
+        <div class="topbar-avatar">LS</div>
+        <div class="topbar-name">Layan Shahin</div>
+    </div>
+    <button class="mytask-btn" onclick="signOut()">Sign Out</button>
+</header>
+
+<div class="layout">
+    <aside class="sidebar">
+        <div class="sidebar-label">Team</div>
+
+        <div class="member-item active" id="mem-LS" onclick="selectMember('LS')">
+            <div class="member-avatar" style="background:#F06292;">LS</div>
+            <div class="member-info">
+                <div class="member-name">Layan Shahin</div>
+                <div class="member-progress">1/3</div>
+            </div>
+            <div class="member-count-badge">3</div>
+        </div>
+
+        <div class="member-item" id="mem-mr" onclick="selectMember('mr')">
+            <div class="member-avatar" style="background:#26A69A;">MR</div>
+            <div class="member-info">
+                <div class="member-name">Marcus Rivera</div>
+                <div class="member-progress">1/3</div>
+            </div>
+            <div class="member-count-badge">3</div>
+        </div>
+
+        <div class="member-item" id="mem-ps" onclick="selectMember('ps')">
+            <div class="member-avatar" style="background:#FFA726;">PS</div>
+            <div class="member-info">
+                <div class="member-name">Priya Sharma</div>
+                <div class="member-progress">0/1</div>
+            </div>
+            <div class="member-count-badge">1</div>
+        </div>
+
+        <div class="member-item" id="mem-at" onclick="selectMember('at')">
+            <div class="member-avatar" style="background:#7E57C2;">AT</div>
+            <div class="member-info">
+                <div class="member-name">Alex Thompson</div>
+                <div class="member-progress">1/2</div>
+            </div>
+            <div class="member-count-badge">2</div>
+        </div>
+
+        <div class="member-item" id="mem-jl" onclick="selectMember('jl')">
+            <div class="member-avatar" style="background:#66BB6A;">JL</div>
+            <div class="member-info">
+                <div class="member-name">Jordan Lee</div>
+                <div class="member-progress">0/1</div>
+            </div>
+            <div class="member-count-badge">1</div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="content-header">
+            <div class="content-header-left">
+                <div class="page-title" id="page-title">My Tasks</div>
+                <span class="view-only-badge" id="view-only-badge" style="display:none;">view only</span>
+            </div>
+            <button class="fab" id="fab-btn" onclick="openModal()">+</button>
+        </div>
+
+        <div class="task-list" id="task-list"></div>
+    </main>
+</div>
+
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="modal-title">New Task</span>
+            <button class="modal-close" onclick="closeModal()">×</button>
+        </div>
+        <div class="modal-field">
+            <label>Title</label>
+            <input type="text" id="modal-title-input" placeholder="e.g. Design landing page" />
+            <span class="error" id="error-title"></span>
+        </div>
+        <div class="modal-field">
+            <label>Description</label>
+            <textarea id="modal-desc-input" placeholder="Add more details..."></textarea>
+            <span class="error" id="error-desc"></span>
+        </div>
+        
+        <div class="modal-actions">
+            <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+            <button class="btn-add" onclick="submitTask()">Add Task</button>
+        </div>
+    </div>
+</div>
+
+<div id="edit-modal-overlay" class="modal-overlay">
+    <div class="modal-field modal">
+        <h2>Modify the task</h2>
+        <input type="hidden" id="edit-modal-id">
+
+        <label>Title</label>
+        <input type="text" id="edit-title-input" placeholder="عنوان المهمة...">
+        <span class="error" id="error-titleEdit"></span>
+
+        <label>Description</label>
+        <textarea id="edit-desc-input" placeholder="وصف المهمة..."></textarea>
+        <span class="error" id="error-descEdit"></span>
+
+        <div class="modal-actions">
+            <button class="btn-cancel" onclick="closeEditModal()">Cancel</button>
+            <button class="btn-add" onclick="submitEdit()">save</button>
+        </div>
+    </div>
+</div>
+<script>
+    window.addEventListener('load', function () {
+        const userName = localStorage.getItem('userName') || 'User';
+        const userInitials = userName.charAt(0).toUpperCase();
+
+        const topbarName = document.querySelector('.topbar-name');
+        const topbarAvatar = document.querySelector('.topbar-avatar');
+        const pageTitle = document.getElementById('page-title');
+
+        if (topbarName) topbarName.textContent = userName;
+        if (topbarAvatar) topbarAvatar.textContent = userInitials;
+        if (pageTitle) pageTitle.textContent = `My Tasks - ${userName}`;
+
+        const firstMember = document.getElementById('mem-LS');
+        const firstMemberName = firstMember?.querySelector('.member-name');
+        const firstMemberAvatar = firstMember?.querySelector('.member-avatar');
+
+        if (firstMemberName) firstMemberName.textContent = userName;
+        if (firstMemberAvatar) {
+            firstMemberAvatar.textContent = userInitials;
+            firstMemberAvatar.style.background = '#F06292';
+        }
+    });
+
+    async function signOut() {
+        localStorage.setItem('signOut', 'true');
+        localStorage.removeItem('userName');
+        window.location.href = './index.html';
+    }
+</script>
+
+<script src="../js/tasks.js"></script>
+</body>
+</html>
